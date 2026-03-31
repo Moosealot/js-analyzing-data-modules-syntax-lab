@@ -1,6 +1,4 @@
-const {
-  combineUsers
-  } = require('../index');
+const   combineUsers = require('../index');
   require('datejs');
 
   describe('combineUsers function return', () => {
