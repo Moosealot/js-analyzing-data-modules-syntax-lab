@@ -15,3 +15,5 @@ function combineUsers(...args) {
 }
 
 module.exports = combineUsers;
+
+console.log(combineUsers(["a"], ["b"]));
