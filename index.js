@@ -5,9 +5,10 @@ function combineUsers(...args) {
         users: []
     };
 
-    for (let arr of args) {
+    // for (let arr of args) {
+    args.forEach(arr => {
         combinedObject.users.push(...arr);
-    }
+    });
 
     combinedObject.merge_date = new Date().toString('M/d/yyyy');
 
@@ -16,4 +17,4 @@ function combineUsers(...args) {
 
 module.exports = combineUsers;
 
-console.log(combineUsers(["a"], ["b"]));
+// console.log(combineUsers(["a"], ["b"]));
