@@ -28,6 +28,15 @@ const   combineUsers = require('../index');
       expect(combine.merge_date).toBe(Date.today().toString("M/d/yyyy"))
       expect(combine2.merge_date).toBe(Date.today().toString("M/d/yyyy"))
     });
+
+    beforeAll(() => {
+        jest.useFakeTimers();
+        jest.setSystemTime(new Date('2026-04-04T00:00:00Z'));
+    });
+    afterAll(() => {        
+        jest.useRealTimers();
+
+    });
     
   })
   
