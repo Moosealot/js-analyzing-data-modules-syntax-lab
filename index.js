@@ -5,12 +5,11 @@ function combineUsers(...args) {
         users: []
     };
 
-    // for (let arr of args) {
     args.forEach(arr => {
         combinedObject.users.push(...arr);
     });
 
-    combinedObject.merge_date = new Date().toString('M/d/yyyy');
+    combinedObject.merge_date = Date.today().toString('M/d/yyyy');
 
     return combinedObject;
 }
