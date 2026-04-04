@@ -1,4 +1,4 @@
-// require('datejs');
+require('datejs');
 const   combineUsers = require('../index');
 
       beforeAll(() => {
