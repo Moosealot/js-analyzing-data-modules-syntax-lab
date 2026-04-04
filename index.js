@@ -1,5 +1,3 @@
-require('datejs');
-
 function combineUsers(...args) {
     const combinedObject = {
         users: []
@@ -9,11 +7,16 @@ function combineUsers(...args) {
         combinedObject.users.push(...arr);
     });
 
-    combinedObject.merge_date = Date.today().toString('M/d/yyyy');
+    const today = new Date();
+    const month = today.getMonth() + 1;
+    const day = today.getDate();
+    const year = today.getFullYear();
+
+    combinedObject.merge_date = `${month}/${day}/${year}`;
 
     return combinedObject;
 }
 
 module.exports = combineUsers;
 
-// console.log(combineUsers(["a"], ["b"]));
+ console.log(combineUsers(["a"], ["b"]));
